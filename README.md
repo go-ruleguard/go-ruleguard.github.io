@@ -1,6 +1,6 @@
 # ruleguard
 
-![Logo](https://raw.githubusercontent.com/quasilyte/go-ruleguard/master/docs/logo2.png)
+<img src="https://raw.githubusercontent.com/quasilyte/go-ruleguard/master/docs/logo2.png" width="20%" height="20%">
 
 Define and run custom linting rules for your Go code using expressive pattern matching.
 
