@@ -1,6 +1,5 @@
 # Hello world
 
-`main.go`:
 ```go
 package gorules
 
@@ -11,7 +10,6 @@ func helloWorld(m fluent.Matcher) {
 }
 ```
 
-`rules.go`:
 ```go
 package main
 
@@ -22,7 +20,7 @@ func main() {
 }
 ```
 
-```bash
+<pre style="color: white; background-color: black">
 $ ruleguard -rules rules.go main.go
 main.go:6:2: found hello world
-```
+</pre>
