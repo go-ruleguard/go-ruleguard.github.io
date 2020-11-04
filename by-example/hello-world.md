@@ -6,13 +6,12 @@ package gorules
 // We always need this import.
 import "github.com/quasilyte/go-ruleguard/dsl/fluent"
 
-// helloWorld is an example named rules group.
-// It has only 1 simple rule inside.
-// The "rules group" signature is fixed.
+// helloWorld is a *named rules group*.
+// It has only 1 simple rule inside and its name is "helloWorld".
+// The *rules group* signature is fixed.
 func helloWorld(m fluent.Matcher) {
-	// A chain that starts with Match() and ends with Report() (or Suggest)
-	// call called "a rule".
-	// Therefore, a minimal rule consists of Match+Report call.
+	// A chain that starts with Match() and ends with Report() (or Suggest) call called a *rule*.
+	// Therefore, a minimal *rule* consists of Match+Report call.
 	//
 	// Match matches the AST using the gogrep pattern string;
 	// Report prints the specified message when this rule is matched.
