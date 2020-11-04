@@ -19,6 +19,12 @@ func helloWorld(m fluent.Matcher) {
 }
 ```
 
+<pre style="color: white; background-color: black">
+$ ruleguard -c 0 -rules rules.go main.go
+main.go:6:2: found hello world
+6		fmt.Println("Hello, world")
+</pre>
+
 <details><summary>main.go</summary>
 
 ```go
@@ -32,12 +38,6 @@ func main() {
 ```
 
 </details>
-
-<pre style="color: white; background-color: black">
-$ ruleguard -c 0 -rules rules.go main.go
-main.go:6:2: found hello world
-6		fmt.Println("Hello, world")
-</pre>
 
 **Notes**:
 
