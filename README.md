@@ -1,8 +1,14 @@
-# [Ruleguard](https://github.com/quasilyte/go-ruleguard)
-
-Define and run custom linting rules for your Go code using expressive pattern matching.
-
 <table>
+  <tr>
+    <td colspan="2" align="center">
+      <h1><a href="https://github.com/quasilyte/go-ruleguard">Ruleguard<a></h1>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center">
+      Define and run custom linting rules for your Go code using expressive pattern matching.
+    </td>
+  </tr>
   <tr>
     <td>
       <b>Key features</b>:
