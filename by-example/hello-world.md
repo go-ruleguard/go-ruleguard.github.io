@@ -1,4 +1,4 @@
-# Hello world
+# Ruleguard by example: Hello world
 
 ```go
 package gorules
