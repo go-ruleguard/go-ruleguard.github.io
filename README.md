@@ -6,7 +6,7 @@
   </tr>
   <tr>
     <td colspan="2" align="center">
-      Define and run custom linting rules for your Go code using expressive pattern matching.
+      Define and run custom linting rules for your Go code using expressive pattern matching
     </td>
   </tr>
   <tr>
