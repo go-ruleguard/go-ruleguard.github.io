@@ -39,6 +39,8 @@ func main() {
 
 </details>
 
+<hr>
+
 **Notes**:
 
 * `-c 0` argument makes the `ruleguard` print **one** context line in it's output (line 6 in this example)
