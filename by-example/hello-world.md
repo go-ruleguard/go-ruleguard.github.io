@@ -35,9 +35,12 @@ main.go:6:2: found hello world
 6		fmt.Println("Hello, world")
 </pre>
 
-Notes:
+**Notes**:
+
 * `-c 0` argument makes the `ruleguard` print **one** context line in it's output (line 6 in this example)
 * `-rules` argument accepts a `ruleguard` rules source (always `rules.go` in out examples)
 * [`Match()`](https://pkg.go.dev/github.com/quasilyte/go-ruleguard/dsl/fluent#Matcher.Match) argument is a [github.com/mvdan/gogrep](https://github.com/mvdan/gogrep) pattern string
 * Ruleguard rules file **must** start with `package gorules`; it can't be other package
 * The [`dsl/fluent`](https://pkg.go.dev/github.com/quasilyte/go-ruleguard/dsl/fluent) package documentation is a common source of the most answers
+
+**Next**: [Submatches](submatches)
