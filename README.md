@@ -8,14 +8,13 @@ Define and run custom linting rules for your Go code using expressive pattern ma
       <img src="https://raw.githubusercontent.com/quasilyte/go-ruleguard/master/docs/logo2.png">
     </td>
     <td>
-      
-**Features**:
-
-* Custom linting rules without re-compilation and Go plugins
-* Diagnostics are written in a declarative way
-* [Quickfix](https://github.com/quasilyte/go-ruleguard/blob/master/docs/gorules.md#suggestions-quickfix-support) actions support
-* Powerful match filtering features, like expression [type pattern matching](https://github.com/quasilyte/go-ruleguard/blob/master/docs/gorules.md#type-pattern-matching)
-      
+      <b>Key features</b>:
+      <ul>
+        <li>Custom linting rules without re-compilation and Go plugins</li>
+        <li>Diagnostics are written in a declarative way</li>
+        <li><a href="https://github.com/quasilyte/go-ruleguard/blob/master/docs/gorules.md#suggestions-quickfix-support">Quickfix</a> actions support</li>
+        <li>Powerful match filtering features, like expression <a href="https://github.com/quasilyte/go-ruleguard/blob/master/docs/gorules.md#type-pattern-matching">type pattern matching</a></li>
+      </ul>
     </td>
   </tr>
 </table>
