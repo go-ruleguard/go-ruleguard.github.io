@@ -1,7 +1,7 @@
 <table>
   <tr>
     <td colspan="2" align="center">
-      <h1><a href="https://github.com/quasilyte/go-ruleguard">Ruleguard<a></h1>
+      <h1><a href="https://github.com/quasilyte/go-ruleguard">Ruleguard</a></h1>
     </td>
   </tr>
   <tr>
