@@ -2,4 +2,4 @@
 
 | Example | Description |
 |---|---|
-| [Hello world](hello-world.md) | A minimal working example to start out journey |
+| [Hello world](hello-world) | A minimal working example to start out journey |
