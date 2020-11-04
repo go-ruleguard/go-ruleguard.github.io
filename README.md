@@ -1,4 +1,4 @@
-# ruleguard
+# [Ruleguard](https://github.com/quasilyte/go-ruleguard)
 
 Define and run custom linting rules for your Go code using expressive pattern matching.
 
