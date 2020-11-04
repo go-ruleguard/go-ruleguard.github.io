@@ -38,3 +38,5 @@ main.go:6:2: found hello world
 Notes:
 * `-c 0` argument makes the `ruleguard` print **one** context line in it's output (line 6 in this example)
 * `-rules` argument accepts a `ruleguard` rules source (always `rules.go` in out examples)
+* `Match()` argument is a [github.com/mvdan/gogrep](https://github.com/mvdan/gogrep) pattern string
+* Ruleguard rules file **must** start with `package gorules`; it can't be other package
