@@ -19,6 +19,8 @@ func helloWorld(m fluent.Matcher) {
 }
 ```
 
+<details><summary>Show main.go</summary>
+
 ```go
 package main
 
@@ -28,6 +30,8 @@ func main() {
 	fmt.Println("Hello, world")
 }
 ```
+
+</details>
 
 <pre style="color: white; background-color: black">
 $ ruleguard -c 0 -rules rules.go main.go
