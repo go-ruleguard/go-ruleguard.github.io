@@ -40,3 +40,4 @@ Notes:
 * `-rules` argument accepts a `ruleguard` rules source (always `rules.go` in out examples)
 * [`Match()`](https://pkg.go.dev/github.com/quasilyte/go-ruleguard/dsl/fluent#Matcher.Match) argument is a [github.com/mvdan/gogrep](https://github.com/mvdan/gogrep) pattern string
 * Ruleguard rules file **must** start with `package gorules`; it can't be other package
+* The [`dsl/fluent`](https://pkg.go.dev/github.com/quasilyte/go-ruleguard/dsl/fluent) package documentation is a common source of the most answers
