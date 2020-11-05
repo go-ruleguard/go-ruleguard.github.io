@@ -79,4 +79,4 @@ func foo() error {
 * A single `gorules` file can contain multiple rule groups; today we defined `dupArg` and `nilValReturn` there
 * When using a `$*` variable in message templates, they're spelled without `*` (e.g. `$args`, not `$*args`)
 
-**Next**: TODO
+**Next**: [Filters](filters)
