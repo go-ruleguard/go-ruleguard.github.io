@@ -15,13 +15,13 @@ func boolLiteralInExpr(m fluent.Matcher) {
 	// 2. $x is re-assigned to $y
 	// 3. $y is re-assigned to $tmp
 	m.Match(`$tmp := $x; $x = $y; $y = $tmp`).
-		Suggest(`$x, $y = $y, $x`)
+		Report(`use parallel assignent: $x, $y = $y, $x`)
 }
 ```
 
 <pre style="color: white; background-color: black">
 $ ruleguard -c 0 -rules rules.go main.go
-main.go:9:2: suggestion: obj1.value, obj2.value = obj2.value, obj1.value
+main.go:9:2: use parallel assignent: obj1.value, obj2.value = obj2.value, obj1.value
 9		tmp := obj1.value
 </pre>
 
@@ -51,6 +51,8 @@ func main() {
 
 **Notes**:
 
-* Quickfix **can** replace a statement list with a single statement as we did in this example
+* `$*_` can be used to describe "any number of statements before this node": `$*_; $x`
+* `$*_` can be used to describe "any number of statements after this node": `$x; $*_`
+* Multi-statement patterns are especially useful when matching blocks: `{$*_; $x; $*_}`
 
 **Next**: [Autofixable rules](autofixable-rules)
