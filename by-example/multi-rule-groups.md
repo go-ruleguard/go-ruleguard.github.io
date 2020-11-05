@@ -48,4 +48,4 @@ func main() {
 
 * If you don't want rules to short-circuit, place them in separate functions
 
-**Next**: TODO
+**Next**: [Autofixable rules](autofixable-rules)
