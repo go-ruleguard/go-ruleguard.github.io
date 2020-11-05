@@ -1,4 +1,4 @@
-# [Ruleguard by example](https://go-ruleguard.github.io/by-example/): Autofixable
+# [Ruleguard by example](https://go-ruleguard.github.io/by-example/): Autofixable rules
 
 ```go
 package gorules
@@ -69,4 +69,4 @@ func main() {
 
 * Combine [`Report()`](https://pkg.go.dev/github.com/quasilyte/go-ruleguard/dsl/fluent#Matcher.Report) and [`Suggest()`](https://pkg.go.dev/github.com/quasilyte/go-ruleguard/dsl/fluent#Matcher.Suggest) if suggested replacement is not self-explanatory
 
-**Next**: TODO
+**Next**: [Submatches](Submatches)
