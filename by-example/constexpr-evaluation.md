@@ -5,8 +5,8 @@ package gorules
 
 import "github.com/quasilyte/go-ruleguard/dsl/fluent"
 
-// It's possible to compute the expression value if we know operands at the
-// compile time: literals, named constants and some other kinds of constexprs.
+// It's possible to compute the expression value if operands are constant expressions:
+// literals, named constants and some other special kinds of constexprs.
 
 func replaceAll(m fluent.Matcher) {
 	// Do you remember our older strings.Replace -> strings.ReplaceAll rules?
