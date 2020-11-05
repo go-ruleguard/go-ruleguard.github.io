@@ -9,10 +9,11 @@ import "github.com/quasilyte/go-ruleguard/dsl/fluent"
 // compile time: literals, named constants and some other kinds of constexprs.
 
 func replaceAll(m fluent.Matcher) {
-	// Previously we matched $n argument as -1.
-	// This is not exhaustive as any $n that is less than 0 will
-	// work identically. So what we really want to do is to
-	// tell whether it's less than 0.
+	// Do you remember our older strings.Replace -> strings.ReplaceAll rules?
+	// We matched $n argument as -1 literal.
+	//
+	// This is not exhaustive as any $n that is less than 0 will work identically.
+	// So what we really want to do is to tell whether it's less than 0.
 
 	m.Match(`strings.Replace($s, $old, $replacement, $n)`).
 		Where(m["n"].Value.Int() < 0).
