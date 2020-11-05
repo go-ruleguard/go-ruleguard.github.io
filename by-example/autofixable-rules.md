@@ -67,5 +67,6 @@ func main() {
 **Notes**:
 
 * Combine [`Report()`](https://pkg.go.dev/github.com/quasilyte/go-ruleguard/dsl/fluent#Matcher.Report) and [`Suggest()`](https://pkg.go.dev/github.com/quasilyte/go-ruleguard/dsl/fluent#Matcher.Suggest) if suggested replacement is not self-explanatory
+* Quickfix **can** replace a statement list with a single statement
 
 **Next**: [Optional submatches](optional-submatches)
