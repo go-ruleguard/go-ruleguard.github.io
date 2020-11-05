@@ -82,6 +82,6 @@ func main() {
 
 <table><tr>
 <td><a href="index">To index</a></td>
-<td><a href="TODO">Next: TODO</a></td>
+<td><a href="external-types">Next: External types</a></td>
 <td><a href="https://github.com/go-ruleguard/go-ruleguard.github.io/edit/master/by-example/type-patterns.md">Edit this page</a></td>
 </tr></table>
