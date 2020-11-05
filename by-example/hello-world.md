@@ -1,4 +1,4 @@
-# [Ruleguard by example](https://go-ruleguard.github.io/by-example/): Hello world [:pencil:](https://github.com/go-ruleguard/go-ruleguard.github.io/blob/master/by-example/hello-world.md)
+# [Ruleguard by example](https://go-ruleguard.github.io/by-example/): Hello world
 
 ```go
 package gorules
@@ -49,4 +49,8 @@ func main() {
 * Ruleguard rules file **must** start with `package gorules`; it can't be other package
 * The [`dsl/fluent`](https://pkg.go.dev/github.com/quasilyte/go-ruleguard/dsl/fluent) package documentation is a common source of the most answers
 
-**Next**: [Submatches](submatches)
+<table><tr>
+	<td><a href="index">To index</a></td>
+	<td><a href="submatches">Next: Submatches</a></td>
+	<td><a href="">Edit this page</a></td>
+</tr></table>
