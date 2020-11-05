@@ -1,4 +1,4 @@
-# [Ruleguard by example](https://go-ruleguard.github.io/by-example/): Autofixable rules [:pencil:](https://github.com/go-ruleguard/go-ruleguard.github.io/blob/master/by-example/autofixable-rules.md)
+# [Ruleguard by example](https://go-ruleguard.github.io/by-example/): Autofixable rules
 
 ```go
 package gorules
@@ -69,4 +69,8 @@ func main() {
 * Combine [`Report()`](https://pkg.go.dev/github.com/quasilyte/go-ruleguard/dsl/fluent#Matcher.Report) and [`Suggest()`](https://pkg.go.dev/github.com/quasilyte/go-ruleguard/dsl/fluent#Matcher.Suggest) if suggested replacement is not self-explanatory
 * Quickfix **can** replace a statement list with a single statement
 
-**Next**: [Optional submatches](optional-submatches)
+<table><tr>
+<td><a href="index">To index</a></td>
+<td><a href="optional-submatches">Next: Optional submatches</a></td>
+<td><a href="https://github.com/go-ruleguard/go-ruleguard.github.io/edit/master/by-example/autofixable-rules.md">Edit this page</a></td>
+</tr></table>
