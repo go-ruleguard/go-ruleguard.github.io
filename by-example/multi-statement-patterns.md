@@ -1,4 +1,4 @@
-# [Ruleguard by example](https://go-ruleguard.github.io/by-example/): Multi-statement patterns [:pencil:](https://github.com/go-ruleguard/go-ruleguard.github.io/blob/master/by-example/multi-statement-patterns.md)
+# [Ruleguard by example](https://go-ruleguard.github.io/by-example/): Multi-statement patterns
 
 ```go
 package gorules
@@ -55,4 +55,9 @@ func main() {
 * `$*_` can be used to describe "any number of statements after this node": `$x; $*_`
 * Multi-statement patterns are especially useful when matching blocks: `{$*_; $x; $*_}`
 
-**Next**: [Autofixable rules](autofixable-rules)
+
+<table><tr>
+<td><a href="index">To index</a></td>
+<td><a href="autofixable-rules">Next: Autofixable rules</a></td>
+<td><a href="https://github.com/go-ruleguard/go-ruleguard.github.io/edit/master/by-example/multi-statement-rules.md">Edit this page</a></td>
+</tr></table>
