@@ -5,7 +5,7 @@ package gorules
 
 import "github.com/quasilyte/go-ruleguard/dsl/fluent"
 
-// We want to report the duplicated left and right operands of binary operations.
+// Suppose that we want to report the duplicated left and right operands of binary operations.
 //
 // But if the operand has some side effects, this rule can cause false positives:
 // `f() && f()` can make sense (although it's not the best piece of code).
