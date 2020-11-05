@@ -1,4 +1,4 @@
-# [Ruleguard by example](https://go-ruleguard.github.io/by-example/): Hello world
+# [Ruleguard by example](https://go-ruleguard.github.io/by-example/): Hello world [:pencil2:](https://github.com/go-ruleguard/go-ruleguard.github.io/blob/master/by-example/hello-world.md)
 
 ```go
 package gorules
