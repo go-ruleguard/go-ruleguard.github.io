@@ -49,4 +49,4 @@ func main() {
 * Ruleguard rules file **must** start with `package gorules`; it can't be other package
 * The [`dsl/fluent`](https://pkg.go.dev/github.com/quasilyte/go-ruleguard/dsl/fluent) package documentation is a common source of the most answers
 
-**Next**: [Multi-rule groups](multi-rule-groups)
+**Next**: [Submatches](submatches)
