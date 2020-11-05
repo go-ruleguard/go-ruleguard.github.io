@@ -1,4 +1,4 @@
-# [Ruleguard by example](https://go-ruleguard.github.io/by-example/): Optional submatches
+# [Ruleguard by example](https://go-ruleguard.github.io/by-example/): Optional submatches [:pencil:](https://github.com/go-ruleguard/go-ruleguard.github.io/blob/master/by-example/optional-submatches.md)
 
 ```go
 package gorules
