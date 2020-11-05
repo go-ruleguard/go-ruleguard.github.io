@@ -37,7 +37,6 @@ $ ruleguard -fix -c 0 -rules rules.go main.go
 ```diff
 + strings.ReplaceAll(s, "old", "new")
 - strings.Replace(s, "old", "new", -1)
-
 + if !strings.Contains(s, "#golang") {
 - if strings.Count(s, "#golang") == 0 {
 ```
