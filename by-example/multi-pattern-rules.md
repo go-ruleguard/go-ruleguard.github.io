@@ -60,4 +60,4 @@ func main() {
 * Use alternations to avoid the unwanted rules repetition
 * Use the same submatch variable names in all alternatives
 
-**Next**: [Autofixable rules](autofixable-rules)
+**Next**: [Multi-statement patterns](multi-statement-patterns)
