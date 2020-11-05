@@ -4,3 +4,4 @@
 1. [Submatches](submatches) - exploring named and unnamed pattern submatch variables
 1. [Multi-rule groups](multi-rule-groups) - putting several rules inside one function, making them short-circuit
 1. [Autofixable rules](autofixable-rules) - using [`Suggest()`](https://pkg.go.dev/github.com/quasilyte/go-ruleguard/dsl/fluent#Matcher.Suggest) to enable quickfix actions
+1. [Optional submatches](optional-submatches) - usign `*` variable modifier to match variadic or optional parts of the pattern
