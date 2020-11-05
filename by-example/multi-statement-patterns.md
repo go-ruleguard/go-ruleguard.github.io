@@ -59,5 +59,5 @@ func main() {
 <table><tr>
 <td><a href="index">To index</a></td>
 <td><a href="autofixable-rules">Next: Autofixable rules</a></td>
-<td><a href="https://github.com/go-ruleguard/go-ruleguard.github.io/edit/master/by-example/multi-statement-rules.md">Edit this page</a></td>
+<td><a href="https://github.com/go-ruleguard/go-ruleguard.github.io/edit/master/by-example/multi-statement-patterns.md">Edit this page</a></td>
 </tr></table>
