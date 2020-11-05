@@ -48,4 +48,8 @@ func main() {
 
 * If you don't want rules to short-circuit, place them in separate functions
 
-**Next**: [Multi-pattern rules](multi-pattern-rules)
+<table><tr>
+<td><a href="index">To index</a></td>
+<td><a href="multi-pattern-rules">Next: Multi-pattern rules</a></td>
+<td><a href="https://github.com/go-ruleguard/go-ruleguard.github.io/edit/master/by-example/multi-rule-groups.md">Edit this page</a></td>
+</tr></table>
