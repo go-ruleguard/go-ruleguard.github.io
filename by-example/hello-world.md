@@ -13,8 +13,8 @@ func helloWorld(m fluent.Matcher) {
 	// A chain that starts with Match() and ends with Report() call called a *rule*.
 	// Therefore, a minimal *rule* consists of Match+Report call.
 	//
-	// Match matches the AST using the gogrep pattern string;
-	// Report prints the specified message when this rule is matched.
+	// Match() matches the AST using the gogrep pattern string;
+	// Report() prints the specified message when this rule is matched.
 	m.Match(`fmt.Println("Hello, world")`).Report("found hello world")
 }
 ```
