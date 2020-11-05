@@ -10,7 +10,7 @@ import "github.com/quasilyte/go-ruleguard/dsl/fluent"
 // It has only 1 simple rule inside and its name is "helloWorld".
 // The *rules group* signature is fixed.
 func helloWorld(m fluent.Matcher) {
-	// A chain that starts with Match() and ends with Report() (or Suggest) call called a *rule*.
+	// A chain that starts with Match() and ends with Report() call called a *rule*.
 	// Therefore, a minimal *rule* consists of Match+Report call.
 	//
 	// Match matches the AST using the gogrep pattern string;
