@@ -7,7 +7,7 @@ import "github.com/quasilyte/go-ruleguard/dsl/fluent"
 
 func boolLiteralInExpr(m fluent.Matcher) {
 	// The following rule includes 4 patterns: 2 for each operator and bool value.
-	// Every pattern in this list called "an alternative".
+	// Every pattern in this list is called "an alternative".
 	// Alternatives are tried out one by one, until we have a match.
 	m.Match(`$x == true`,
 		`$x != true`,
