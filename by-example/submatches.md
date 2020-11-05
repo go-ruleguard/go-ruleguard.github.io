@@ -13,6 +13,7 @@ func dupArg(m fluent.Matcher) {
 	// Repeated named variable requires all submatches to be identical, like in pattern matching.
 	//
 	// If named submatch is used in Report() argument string, it will be interpolated.
+	// $$ will be replaced with an entire match (like $0 in regular expressions).
 	m.Match(`strings.ReplaceAll($_, $x, $x)`).
 		Report(`suspicious duplicated arg $x`)
 }
