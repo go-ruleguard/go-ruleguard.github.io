@@ -1,4 +1,4 @@
-# [Ruleguard by example](https://go-ruleguard.github.io/by-example/): Multi-pattern rules [:pencil:](https://github.com/go-ruleguard/go-ruleguard.github.io/blob/master/by-example/multi-pattern-rules.md)
+# [Ruleguard by example](https://go-ruleguard.github.io/by-example/): Multi-pattern rules
 
 ```go
 package gorules
@@ -60,4 +60,8 @@ func main() {
 * Use alternations to avoid the unwanted rules repetition
 * Use the same submatch variable names in all alternatives
 
-**Next**: [Multi-statement patterns](multi-statement-patterns)
+<table><tr>
+<td><a href="index">To index</a></td>
+<td><a href="multi-statement-patterns">Next: Multi-statement patterns</a></td>
+<td><a href="https://github.com/go-ruleguard/go-ruleguard.github.io/edit/master/by-example/multi-pattern-rules.md">Edit this page</a></td>
+</tr></table>
