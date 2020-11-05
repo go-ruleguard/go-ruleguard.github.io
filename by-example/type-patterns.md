@@ -5,7 +5,7 @@ package gorules
 
 import "github.com/quasilyte/go-ruleguard/dsl/fluent"
 
-// Sometimes you can't describe a pricese type using the normal syntax.
+// Sometimes you can't describe the exact type using the normal syntax.
 //
 // Suppose that you're trying to find all array-typed values dereferencing.
 // There can be unlimited ways to write array type: not only you need to spell
