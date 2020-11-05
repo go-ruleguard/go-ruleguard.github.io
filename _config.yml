@@ -1,3 +1,5 @@
 name: Ruleguard
 title: null
 markdown: CommonMarkGhPages
+plugins:
+  - jemoji
