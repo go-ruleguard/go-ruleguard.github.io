@@ -1,4 +1,4 @@
-# [Ruleguard by example](https://go-ruleguard.github.io/by-example/): Type patterns [:pencil:](https://github.com/go-ruleguard/go-ruleguard.github.io/blob/master/by-example/type-patterns.md)
+# [Ruleguard by example](https://go-ruleguard.github.io/by-example/): Type patterns
 
 ```go
 package gorules
@@ -80,4 +80,8 @@ func main() {
 * `struct{$*_; $x}` matches a struct that has $x-typed last field
 * It's impossible to enumerate everything here, but you should get the general
 
-**Next**: TODO
+<table><tr>
+<td><a href="index">To index</a></td>
+<td><a href="TODO">Next: TODO</a></td>
+<td><a href="https://github.com/go-ruleguard/go-ruleguard.github.io/edit/master/by-example/type-patterns.md">Edit this page</a></td>
+</tr></table>
