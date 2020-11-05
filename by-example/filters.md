@@ -68,4 +68,4 @@ func f() bool { return false }
 * To get negated conditions, `!` can be used (e.g. `!m["x"].Const`)
 * If match is rejected due to the filter, the rest pattern alternatives from [`Match()`](https://pkg.go.dev/github.com/quasilyte/go-ruleguard/dsl/fluent#Matcher.Match) (if any) will not be checked
 
-**Next**: TODO
+**Next**: [Type filters](type-filters)
