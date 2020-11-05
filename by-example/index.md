@@ -17,4 +17,5 @@
 1. External types - using [`Import()`](https://pkg.go.dev/github.com/quasilyte/go-ruleguard/dsl/fluent#Matcher.Import) to bind qualified type names
 1. File predicates - applying file-scoped filters
 1. Text filters - matching "literal" variables (by their name) and more
+1. Constexpr evaluation - writing filters based on the expression values
 1. Custom locations - using [`At()`](https://pkg.go.dev/github.com/quasilyte/go-ruleguard/dsl/fluent#Matcher.At) to adjust the match location
