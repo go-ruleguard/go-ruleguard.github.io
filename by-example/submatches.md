@@ -1,4 +1,4 @@
-# [Ruleguard by example](https://go-ruleguard.github.io/by-example/): Submatches
+# [Ruleguard by example](https://go-ruleguard.github.io/by-example/): Submatches [:pencil:](https://github.com/go-ruleguard/go-ruleguard.github.io/blob/master/by-example/submatches.md)
 
 ```go
 package gorules
@@ -8,7 +8,7 @@ import "github.com/quasilyte/go-ruleguard/dsl/fluent"
 func dupArg(m fluent.Matcher) {
 	// The pattern string can contain *submatch variables*.
 	//
-	// $_ is unnamed submatch variable, it matches any kind of AST element.
+	// $_ is an unnamed submatch variable, it matches any kind of AST element.
 	// $<name> (e.g. $x) is a named submatch variable; it also matches anything.
 	// Repeated named variable requires all submatches to be identical, like in pattern matching.
 	//
