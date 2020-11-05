@@ -1,4 +1,4 @@
-# [Ruleguard by example](https://go-ruleguard.github.io/by-example/): Filters [:pencil:](https://github.com/go-ruleguard/go-ruleguard.github.io/blob/master/by-example/filters.md)
+# [Ruleguard by example](https://go-ruleguard.github.io/by-example/): Filters
 
 ```go
 package gorules
@@ -68,4 +68,8 @@ func f() bool { return false }
 * To get negated conditions, `!` can be used (e.g. `!m["x"].Const`)
 * If match is rejected due to the filter, the rest pattern alternatives from [`Match()`](https://pkg.go.dev/github.com/quasilyte/go-ruleguard/dsl/fluent#Matcher.Match) (if any) will not be checked
 
-**Next**: [Type filters](type-filters)
+<table><tr>
+<td><a href="index">To index</a></td>
+<td><a href="type-filters">Next: Type filters</a></td>
+<td><a href="https://github.com/go-ruleguard/go-ruleguard.github.io/edit/master/by-example/filters.md">Edit this page</a></td>
+</tr></table>
