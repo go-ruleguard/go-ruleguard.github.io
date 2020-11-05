@@ -68,4 +68,4 @@ func main() {
 * It's possible to use third-party (external) types in filters, but they need to be imported; we'll get to it
 * By default, you can use builtin types (e.g. `int16`) and qualified types from the stdlib (e.g. `io.Reader`)
 
-**Next**: TODO
+**Next**: [Type patterns](type-patterns)
