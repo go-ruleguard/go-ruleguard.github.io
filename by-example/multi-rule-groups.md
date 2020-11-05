@@ -1,4 +1,4 @@
-# [Ruleguard by example](https://go-ruleguard.github.io/by-example/): Multi-rule groups [:pencil:](https://github.com/go-ruleguard/go-ruleguard.github.io/blob/master/by-example/multi-rule-groups.md)
+# [Ruleguard by example](https://go-ruleguard.github.io/by-example/): Multi-rule groups
 
 ```go
 package gorules
