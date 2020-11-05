@@ -1,4 +1,4 @@
-# [Ruleguard by example](https://go-ruleguard.github.io/by-example/): Submatches [:pencil:](https://github.com/go-ruleguard/go-ruleguard.github.io/blob/master/by-example/submatches.md)
+# [Ruleguard by example](https://go-ruleguard.github.io/by-example/): Submatches
 
 ```go
 package gorules
@@ -55,4 +55,8 @@ func main() {
 * `$_` can be repeated many times, it doesn't require submatches to be identical
 * Variable names should be helpful, like `$len`; don't use `$x` everywhere
 
-**Next**: [Multi-rule groups](multi-rule-groups)
+<table><tr>
+<td><a href="index">To index</a></td>
+<td><a href="multi-rule-groups">Next: Multi-rule groups</a></td>
+<td><a href="https://github.com/go-ruleguard/go-ruleguard.github.io/edit/master/by-example/submatches.md">Edit this page</a></td>
+</tr></table>
