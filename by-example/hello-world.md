@@ -50,7 +50,7 @@ func main() {
 * The [`dsl/fluent`](https://pkg.go.dev/github.com/quasilyte/go-ruleguard/dsl/fluent) package documentation is a common source of the most answers
 
 <table><tr>
-	<td><a href="index">To index</a></td>
-	<td><a href="submatches">Next: Submatches</a></td>
-	<td><a href="">Edit this page</a></td>
+<td><a href="index">To index</a></td>
+<td><a href="submatches">Next: Submatches</a></td>
+<td><a href="https://github.com/go-ruleguard/go-ruleguard.github.io/edit/master/by-example/hello-world.md">Edit this page</a></td>
 </tr></table>
