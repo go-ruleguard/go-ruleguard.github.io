@@ -7,7 +7,7 @@ import "github.com/quasilyte/go-ruleguard/dsl/fluent"
 
 // Sometimes you can't describe the exact type using the normal syntax.
 //
-// Suppose that you're trying to find all array-typed values dereferencing.
+// Suppose that you're trying to find array-typed value dereferencing.
 // There can be unlimited ways to write array type: not only you need to spell
 // its element type, it should also have a size specified as a part of the type.
 //
