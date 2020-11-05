@@ -12,7 +12,7 @@
 1. [Multi-pattern rules](multi-pattern-rules) - putting several patterns into a single rule
 1. [Autofixable rules](autofixable-rules) - using [`Suggest()`](https://pkg.go.dev/github.com/quasilyte/go-ruleguard/dsl/fluent#Matcher.Suggest) to enable quickfix actions
 1. [Optional submatches](optional-submatches) - usign `*` variable modifier to match variadic or optional parts of the pattern
-1. Match filters - using [`Where()`](https://pkg.go.dev/github.com/quasilyte/go-ruleguard/dsl/fluent#Matcher.Where) to skip the unrelated matches
+1. [Filters](filters) - using [`Where()`](https://pkg.go.dev/github.com/quasilyte/go-ruleguard/dsl/fluent#Matcher.Where) to reject the unwanted matches
 1. Type patterns - applying advanced type filters
 1. Underlying types - understanding the underlying types in Go and how can we handle them in the Ruleguard
 1. External types - using [`Import()`](https://pkg.go.dev/github.com/quasilyte/go-ruleguard/dsl/fluent#Matcher.Import) to bind qualified type names
