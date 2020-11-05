@@ -54,4 +54,4 @@ func main() {
 * `$_` can be repeated many times, it doesn't require submatches to be identical
 * Variable names should be helpful, like `$len`; don't use `$x` everywhere
 
-**Next**: TODO
+**Next**: [Multi-rule groups](multi-rule-groups)
