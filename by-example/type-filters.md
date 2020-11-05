@@ -1,4 +1,4 @@
-# [Ruleguard by example](https://go-ruleguard.github.io/by-example/): Type filters [:pencil:](https://github.com/go-ruleguard/go-ruleguard.github.io/blob/master/by-example/type-filters.md)
+# [Ruleguard by example](https://go-ruleguard.github.io/by-example/): Type filters
 
 ```go
 package gorules
@@ -68,4 +68,8 @@ func main() {
 * It's possible to use third-party (external) types in filters, but they need to be imported; we'll get to it
 * By default, you can use builtin types (e.g. `int16`) and qualified types from the stdlib (e.g. `io.Reader`)
 
-**Next**: [Type patterns](type-patterns)
+<table><tr>
+<td><a href="index">To index</a></td>
+<td><a href="type-patterns">Next: Type patterns</a></td>
+<td><a href="https://github.com/go-ruleguard/go-ruleguard.github.io/edit/master/by-example/type-filters.md">Edit this page</a></td>
+</tr></table>
