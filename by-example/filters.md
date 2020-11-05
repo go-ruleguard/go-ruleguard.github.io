@@ -65,6 +65,7 @@ func f() bool { return false }
 
 * [`Where()`](https://pkg.go.dev/github.com/quasilyte/go-ruleguard/dsl/fluent#Matcher.Where) argument is just a normal Go boolean expression
 * To combine several filter conditions, `&&` can be used, like in `m["x"].Pure && m["y"].Const`
+* To get negated conditions, `!` can be used, like in `!m["x"].Const`
 * If match is rejected due to the filter, the rest pattern alternatives from [`Match()`](https://pkg.go.dev/github.com/quasilyte/go-ruleguard/dsl/fluent#Matcher.Match) (if any) will not be checked
 
 **Next**: TODO
