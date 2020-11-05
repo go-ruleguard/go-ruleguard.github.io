@@ -1,4 +1,4 @@
-# [Ruleguard by example](https://go-ruleguard.github.io/by-example/): Optional submatches [:pencil:](https://github.com/go-ruleguard/go-ruleguard.github.io/blob/master/by-example/optional-submatches.md)
+# [Ruleguard by example](https://go-ruleguard.github.io/by-example/): Optional submatches
 
 ```go
 package gorules
@@ -79,4 +79,8 @@ func foo() error {
 * A single `gorules` file can contain multiple rule groups; today we defined `dupArg` and `nilValReturn` there
 * When using a `$*` variable in message templates, they're spelled without `*` (e.g. `$args`, not `$*args`)
 
-**Next**: [Filters](filters)
+<table><tr>
+<td><a href="index">To index</a></td>
+<td><a href="filters">Next: Filters</a></td>
+<td><a href="https://github.com/go-ruleguard/go-ruleguard.github.io/edit/master/by-example/optional-submatches.md">Edit this page</a></td>
+</tr></table>
