@@ -73,6 +73,6 @@ func main() {
 
 <table><tr>
 <td><a href="index">To index</a></td>
-<td><a href="todo">Next: TODO</a></td>
+<td><a href="custom-locations">Next: Custom locations</a></td>
 <td><a href="https://github.com/go-ruleguard/go-ruleguard.github.io/edit/master/by-example/constexpr-evaluation.md">Edit this page</a></td>
 </tr></table>
