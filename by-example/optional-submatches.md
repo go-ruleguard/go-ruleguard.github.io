@@ -14,7 +14,7 @@ func nilValReturn(m fluent.Matcher) {
 		Report(`returned $x value is always nil`)
 }
 
-func dupArg(m fluent.Matcher) {
+func fprintStdout(m fluent.Matcher) {
 	// `*` can be used with a name other than "_".
 	// This is especially useful for variadic functions matching.
 	// The named $* submatch can be used in both Report() and Suggest() templates.
