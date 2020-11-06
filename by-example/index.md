@@ -18,7 +18,7 @@
 1. [Type patterns](type-patterns) - mastering the advanced type pattern matching techniques
 1. [External types](external-types) - using [`Import()`](https://pkg.go.dev/github.com/quasilyte/go-ruleguard/dsl/fluent#Matcher.Import) to bind qualified type names
 1. [Underlying types](underlying-types) - understanding the underlying types in Go and how can we handle them in the Ruleguard
-1. File predicates - applying file-scoped filters
+1. [File predicates](file-predicates) - applying file-scoped filters
 1. Text filters - matching "literal" variables (by their name) and more
 1. [Constexpr evaluation](constexpr-evaluation) - writing filters based on the expression values
 1. Custom locations - using [`At()`](https://pkg.go.dev/github.com/quasilyte/go-ruleguard/dsl/fluent#Matcher.At) to adjust the match location
