@@ -15,7 +15,7 @@ import "github.com/quasilyte/go-ruleguard/dsl/fluent"
 // type that is defined like this: `type myBytes []byte`.
 // It's still bytes, right?
 
-func replaceAll(m fluent.Matcher) {
+func binaryWrite(m fluent.Matcher) {
 	// When we consider myBytes type we need to remember that
 	// it's *underlying* type is []byte. The underlying type
 	// of []byte is []byte.
