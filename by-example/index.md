@@ -21,4 +21,4 @@
 1. [File predicates](file-predicates) - applying file-scoped filters
 1. [Text filters](text-filters) - matching "literal" variables (by their name) and more
 1. [Constexpr evaluation](constexpr-evaluation) - writing filters based on the expression values
-1. Custom locations - using [`At()`](https://pkg.go.dev/github.com/quasilyte/go-ruleguard/dsl/fluent#Matcher.At) to adjust the match location
+1. [Custom locations](custom-locations) - using [`At()`](https://pkg.go.dev/github.com/quasilyte/go-ruleguard/dsl/fluent#Matcher.At) to adjust the match location
