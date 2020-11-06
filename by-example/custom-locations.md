@@ -40,12 +40,6 @@ main.go:19:11: maybe mu.RUnlock() was intended?
 19		defer mu.Unlock()
 </pre>
 
-If we'll run `ruleguard` with the `-fix` flag, quickfix actions will be applied inplace.
-
-<pre style="color: white; background-color: black">
-$ ruleguard -fix -c 0 -rules rules.go main.go
-</pre>
-
 <details><summary>main.go</summary>
 
 ```go
