@@ -1,4 +1,4 @@
-# [Ruleguard by example](https://go-ruleguard.github.io/by-example/): Constexpr evaluation
+# [Ruleguard by example](https://go-ruleguard.github.io/by-example/): Node predicates
 
 ```go
 package gorules
@@ -65,6 +65,6 @@ func main() {
 
 <table><tr>
 <td><a href="index">To index</a></td>
-<td><a href="custom-locations">Next: Custom locations</a></td>
-<td><a href="https://github.com/go-ruleguard/go-ruleguard.github.io/edit/master/by-example/constexpr-evaluation.md">Edit this page</a></td>
+<td><a href="file-predicates">Next: File predicates</a></td>
+<td><a href="https://github.com/go-ruleguard/go-ruleguard.github.io/edit/master/by-example/node-predicates.md">Edit this page</a></td>
 </tr></table>
