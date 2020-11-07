@@ -79,6 +79,6 @@ func main() {
 
 <table><tr>
 <td><a href="index">To index</a></td>
-<td><a href="file-predicates">Next: File predicates</a></td>
+<td><a href="node-predicates">Next: Node predicates</a></td>
 <td><a href="https://github.com/go-ruleguard/go-ruleguard.github.io/edit/master/by-example/underlying-types.md">Edit this page</a></td>
 </tr></table>
