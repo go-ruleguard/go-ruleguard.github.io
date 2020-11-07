@@ -22,3 +22,9 @@
 1. [Text filters](text-filters) - matching "literal" variables (by their name) and more
 1. [Constexpr evaluation](constexpr-evaluation) - writing filters based on the expression values
 1. [Custom locations](custom-locations) - using [`At()`](https://pkg.go.dev/github.com/quasilyte/go-ruleguard/dsl/fluent#Matcher.At) to adjust the match location
+
+<hr>
+
+<p align="center">
+  <img src="ruleguard_poster.png">
+</p>
