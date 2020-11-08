@@ -21,7 +21,7 @@ func replaceAll(m fluent.Matcher) {
 
 func badCond(m fluent.Matcher) {
 	// If we use Value.Int() on the right-hand-side, we can achieve even more
-	// and compare how to constexpr values compare to each other.
+	// and compare how constexpr values compare to each other.
 
 	m.Match(`$x < $a && $x > $b`).
 		Where(m["a"].Value.Int() <= m["b"].Value.Int()).
