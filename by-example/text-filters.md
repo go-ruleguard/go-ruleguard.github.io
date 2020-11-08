@@ -74,6 +74,7 @@ func f() (int, error) { return 0, nil }
 **Notes**:
 
 * If ruleguard lacks some feature and you're solving this by using text filters, consider doing a [feature request](https://github.com/quasilyte/go-ruleguard/issues/new)
+* You can use `Text` on a right-hand-side (e.g. `m["x"].Text != m["y"].Text`)
 
 <table><tr>
 <td><a href="index">To index</a></td>
