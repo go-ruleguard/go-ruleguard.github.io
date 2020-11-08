@@ -14,29 +14,39 @@ func replaceAll(m fluent.Matcher) {
 	//
 	// This is not exhaustive as any $n that is less than 0 will work identically.
 	// So what we really want to do is to tell whether it's less than 0.
-
 	m.Match(`strings.Replace($s, $old, $replacement, $n)`).
 		Where(m["n"].Value.Int() < 0).
 		Suggest(`strings.ReplaceAll($s, $old, $replacement)`)
+}
 
-	m.Match(`bytes.Replace($s, $old, $replacement, $n)`).
-		Where(m["n"].Value.Int() < 0).
-		Suggest(`bytes.ReplaceAll($s, $old, $replacement)`)
+func badCond(m fluent.Matcher) {
+	// If we use Value.Int() on the right-hand-side, we can achieve even more
+	// and compare how to constexpr values compare to each other.
+
+	m.Match(`$x < $a && $x > $b`).
+		Where(m["a"].Value.Int() <= m["b"].Value.Int()).
+		Report("the condition is always false because $a <= $b")
+
+	m.Match(`$x > $a && $x < $b`).
+		Where(m["a"].Value.Int() >= m["b"].Value.Int()).
+		Report("the condition is always false because $a >= $b")
 }
 ```
 
 <pre style="color: white; background-color: black">
 $ ruleguard -c 0 -rules rules.go main.go
-main.go:14:6: suggestion: strings.ReplaceAll(s, toReplace, replacement)
-14		_ = strings.Replace(s, toReplace, replacement, -1)
-main.go:15:6: suggestion: strings.ReplaceAll(s, toReplace, replacement)
-15		_ = strings.Replace(s, toReplace, replacement, -10)
-main.go:16:6: suggestion: strings.ReplaceAll(s, " ", "")
-16		_ = strings.Replace(s, " ", "", 10-11) // Const-folded and matched
-main.go:17:6: suggestion: strings.ReplaceAll(s, "/", `\`)
-17		_ = strings.Replace(s, "/", `\`, negativeConst)
-main.go:18:6: suggestion: bytes.ReplaceAll([]byte(s), []byte("?"), nil)
-18		_ = bytes.Replace([]byte(s), []byte("?"), nil, negativeConst*2)
+main.go:11:6: suggestion: strings.ReplaceAll(s, toReplace, replacement)
+11		_ = strings.Replace(s, toReplace, replacement, -1)
+main.go:12:6: suggestion: strings.ReplaceAll(s, toReplace, replacement)
+12		_ = strings.Replace(s, toReplace, replacement, -10)
+main.go:13:6: suggestion: strings.ReplaceAll(s, " ", "")
+13		_ = strings.Replace(s, " ", "", 10-11) // Const-folded and matched
+main.go:14:6: suggestion: strings.ReplaceAll(s, "/", `\`)
+14		_ = strings.Replace(s, "/", `\`, negativeConst)
+main.go:20:5: the condition is always false because -10 <= 10
+20		if x < -10 && x > 10 {
+main.go:23:5: the condition is always false because ten+1 >= -10
+23		if x > ten+1 && x < -10 {
 </pre>
 
 <details><summary>main.go</summary>
@@ -44,10 +54,7 @@ main.go:18:6: suggestion: bytes.ReplaceAll([]byte(s), []byte("?"), nil)
 ```go
 package main
 
-import (
-	"bytes"
-	"strings"
-)
+import "strings"
 
 func main() {
 	var s, toReplace, replacement string
@@ -59,7 +66,22 @@ func main() {
 	_ = strings.Replace(s, toReplace, replacement, -10)
 	_ = strings.Replace(s, " ", "", 10-11) // Const-folded and matched
 	_ = strings.Replace(s, "/", `\`, negativeConst)
-	_ = bytes.Replace([]byte(s), []byte("?"), nil, negativeConst*2)
+
+	badCond(1, 2)
+}
+
+func badCond(x, y int) {
+	if x < -10 && x > 10 {
+	}
+	const ten = 10
+	if x > ten+1 && x < -10 {
+	}
+
+	// Don't know what value `y` have.
+	if x < y && x > 10 {
+	}
+	if x < -10 && y > 10 {
+	}
 }
 ```
 
