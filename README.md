@@ -7,6 +7,8 @@
   <tr>
     <td colspan="2" align="center">
       Define and run custom linting rules for your Go code using expressive pattern matching
+      <br>
+      <a href="https://go-ruleguard.github.io/play">Try it online!</a>
     </td>
   </tr>
   <tr>
@@ -23,6 +25,16 @@
       <img src="https://raw.githubusercontent.com/quasilyte/go-ruleguard/master/docs/logo2.png">
     </td>
   </tr>
+  <tr>
+    <td colspan="2">
+      <b>Documentation</b>:
+      <ul>
+        <li><a href="https://go-ruleguard.github.io/by-example/">Ruleguard by example</a> tour</li>
+        <li>Introduction article: <a href="https://quasilyte.dev/blog/post/ruleguard/">EN</a>, <a href="https://habr.com/ru/post/481696/">RU</a></li>
+        <li><a href="https://github.com/quasilyte/go-ruleguard/blob/master/docs/gorules.md">Go rules</a> format documentation</li>
+        <li><a href="https://godoc.org/github.com/quasilyte/go-ruleguard/dsl/fluent">dsl/fluent</a> package reference</li>
+        <li><a href="https://speakerdeck.com/quasilyte/ruleguard-vs-semgrep-vs-codeql">Ruleguard comparison with Semgrep and CodeQL</a></li>
+      </ul>
+    </td>
+  </tr>
 </table>
-
-
