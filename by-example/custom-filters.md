@@ -14,7 +14,7 @@ import (
 // implementsStringer is a custom filter function.
 // It tries both T and *T to see whether a type implements `fmt.Stringer`.
 func implementsStringer(ctx *dsl.VarFilterContext) bool {
-    // ctx.Type mapped to m["x"].Type;
+	// ctx.Type mapped to m["x"].Type;
 	// ctx.GetInterface finds the `types.Type` object for the `fmt.Stringer`.
 	stringer := ctx.GetInterface(`fmt.Stringer`)
 	return types.Implements(ctx.Type, stringer) ||
