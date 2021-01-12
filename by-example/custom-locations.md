@@ -80,6 +80,6 @@ func f3(mu *sync.RWMutex) {
 
 <table><tr>
 <td><a href="index">To index</a></td>
-<td><a href="?">Next: ?</a></td>
+<td><a href="custom-filters">Next: Custom filters</a></td>
 <td><a href="https://github.com/go-ruleguard/go-ruleguard.github.io/edit/master/by-example/custom-locations.md">Edit this page</a></td>
 </tr></table>
