@@ -3,13 +3,13 @@
 ```go
 package gorules
 
-import "github.com/quasilyte/go-ruleguard/dsl/fluent"
+import "github.com/quasilyte/go-ruleguard/dsl"
 
 // Normally, all matching is done on the AST and types level.
 // But sometimes it's necessary (or just easier) to tream the
 // submatches as text.
 
-func printFmt(m fluent.Matcher) {
+func printFmt(m dsl.Matcher) {
 	// Here we scan a $s string for %s, %d and %v.
 	m.Match(`fmt.Println($s, $*_)`,
 		`fmt.Print($s, $*_)`).
@@ -17,7 +17,7 @@ func printFmt(m fluent.Matcher) {
 		Report("found formatting directive in non-formatting call")
 }
 
-func wrongErrChecked(m fluent.Matcher) {
+func wrongErrChecked(m dsl.Matcher) {
 	// Here we check for both types and names.
 	// Note that we can use `==` and `!=` with Text.
 	m.Match("if $*_, $err0 := $*_; $err1 != nil { $*_ }").

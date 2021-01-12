@@ -3,18 +3,18 @@
 ```go
 package gorules
 
-import "github.com/quasilyte/go-ruleguard/dsl/fluent"
+import "github.com/quasilyte/go-ruleguard/dsl"
 
 // The special `*` modifier can be used to match 0 or more nodes.
 
-func nilValReturn(m fluent.Matcher) {
+func nilValReturn(m dsl.Matcher) {
 	// $*_ is used to make init clause inside if statement optional,
 	// so our pattern can match all if statements.
 	m.Match(`if $*_; $x == nil { return $x }`).
 		Report(`returned $x value is always nil`)
 }
 
-func fprintStdout(m fluent.Matcher) {
+func fprintStdout(m dsl.Matcher) {
 	// `*` can be used with a name other than "_".
 	// This is especially useful for variadic functions matching.
 	// The named $* submatch can be used in both Report() and Suggest() templates.

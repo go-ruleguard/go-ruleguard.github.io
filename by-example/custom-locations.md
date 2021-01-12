@@ -3,13 +3,13 @@
 ```go
 package gorules
 
-import "github.com/quasilyte/go-ruleguard/dsl/fluent"
+import "github.com/quasilyte/go-ruleguard/dsl"
 
 // When analyzer is integrated into the text editor (or IDE),
 // it's very important to provide good issue locations so
 // the editor can highlight the offending part correctly.
 
-func mismatchingUnlock(m fluent.Matcher) {
+func mismatchingUnlock(m dsl.Matcher) {
 	// By default, an entire match position is used as a location.
 	// This can be changed by the At() method that binds the location
 	// to the provided named submatch.

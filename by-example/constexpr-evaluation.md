@@ -3,12 +3,12 @@
 ```go
 package gorules
 
-import "github.com/quasilyte/go-ruleguard/dsl/fluent"
+import "github.com/quasilyte/go-ruleguard/dsl"
 
 // It's possible to compute the expression value if operands are constant expressions:
 // literals, named constants and some other special kinds of constexprs.
 
-func replaceAll(m fluent.Matcher) {
+func replaceAll(m dsl.Matcher) {
 	// Do you remember our older strings.Replace -> strings.ReplaceAll rules?
 	// We matched $n argument as -1 literal.
 	//
@@ -19,7 +19,7 @@ func replaceAll(m fluent.Matcher) {
 		Suggest(`strings.ReplaceAll($s, $old, $replacement)`)
 }
 
-func badCond(m fluent.Matcher) {
+func badCond(m dsl.Matcher) {
 	// If we use Value.Int() on the right-hand-side, we can achieve even more
 	// and compare how constexpr values compare to each other.
 

@@ -3,7 +3,7 @@
 ```go
 package gorules
 
-import "github.com/quasilyte/go-ruleguard/dsl/fluent"
+import "github.com/quasilyte/go-ruleguard/dsl"
 
 // Suppose that we want to report the duplicated left and right operands of binary operations.
 //
@@ -12,7 +12,7 @@ import "github.com/quasilyte/go-ruleguard/dsl/fluent"
 //
 // This is where *filters* come to the rescue.
 
-func dupSubExpr(m fluent.Matcher) {
+func dupSubExpr(m dsl.Matcher) {
 	// All filters are written as a Where() argument.
 	// In our case, we need to assert that $x is "pure".
 	// It can be achieved by checking the m["x"] member Pure field.
@@ -63,10 +63,10 @@ func f() bool { return false }
 
 **Notes**:
 
-* [`Where()`](https://pkg.go.dev/github.com/quasilyte/go-ruleguard/dsl/fluent#Matcher.Where) argument is just a normal Go boolean expression
+* [`Where()`](https://pkg.go.dev/github.com/quasilyte/go-ruleguard/dsl#Matcher.Where) argument is just a normal Go boolean expression
 * To combine several filter conditions, `&&` can be used (e.g. `m["x"].Pure && m["y"].Const`)
 * To get negated conditions, `!` can be used (e.g. `!m["x"].Const`)
-* If match is rejected due to the filter, the rest pattern alternatives from [`Match()`](https://pkg.go.dev/github.com/quasilyte/go-ruleguard/dsl/fluent#Matcher.Match) (if any) will not be checked
+* If match is rejected due to the filter, the rest pattern alternatives from [`Match()`](https://pkg.go.dev/github.com/quasilyte/go-ruleguard/dsl#Matcher.Match) (if any) will not be checked
 
 <table><tr>
 <td><a href="index">To index</a></td>

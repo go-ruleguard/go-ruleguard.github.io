@@ -4,12 +4,12 @@
 package gorules
 
 // We always need this import.
-import "github.com/quasilyte/go-ruleguard/dsl/fluent"
+import "github.com/quasilyte/go-ruleguard/dsl"
 
 // helloWorld is a *named rules group*.
 // It has only 1 simple rule inside and its name is "helloWorld".
 // The *rules group* signature is fixed.
-func helloWorld(m fluent.Matcher) {
+func helloWorld(m dsl.Matcher) {
 	// A chain that starts with Match() and ends with Report() call called a *rule*.
 	// Therefore, a minimal *rule* consists of Match+Report call.
 	//
@@ -45,9 +45,9 @@ func main() {
 
 * `-c 0` argument makes the `ruleguard` print **one** context line in its output (line 6 in this example)
 * `-rules` argument accepts a `ruleguard` rules source (always `rules.go` in out examples)
-* [`Match()`](https://pkg.go.dev/github.com/quasilyte/go-ruleguard/dsl/fluent#Matcher.Match) argument is a [github.com/mvdan/gogrep](https://github.com/mvdan/gogrep) pattern string
+* [`Match()`](https://pkg.go.dev/github.com/quasilyte/go-ruleguard/dsl#Matcher.Match) argument is a [github.com/mvdan/gogrep](https://github.com/mvdan/gogrep) pattern string
 * Ruleguard rules file **must** start with `package gorules`; it can't be other package
-* The [`dsl/fluent`](https://pkg.go.dev/github.com/quasilyte/go-ruleguard/dsl/fluent) package documentation is a common source of the most answers
+* The [`dsl`](https://pkg.go.dev/github.com/quasilyte/go-ruleguard/dsl) package documentation is a common source of the most answers
 
 <table><tr>
 <td><a href="index">To index</a></td>

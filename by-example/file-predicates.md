@@ -3,7 +3,7 @@
 ```go
 package gorules
 
-import "github.com/quasilyte/go-ruleguard/dsl/fluent"
+import "github.com/quasilyte/go-ruleguard/dsl"
 
 // The "path/filepath" package forwards path separators so if
 // the file already uses filepath-related API it might be
@@ -11,7 +11,7 @@ import "github.com/quasilyte/go-ruleguard/dsl/fluent"
 //
 // In some cases it helps to remove the "os" package import completely.
 
-func osFilepath(m fluent.Matcher) {
+func osFilepath(m dsl.Matcher) {
 	// The File() method returns an object that can be used
 	// to add file-related filters.
 	// Here we require a file to import the "path/filepath" package.
@@ -60,8 +60,8 @@ func main() {
 
 **Notes**:
 
-* [`File.Name`](https://godoc.org/github.com/quasilyte/go-ruleguard/dsl/fluent#File) can be used to check the current file name
-* [`File.PkgPath`](https://godoc.org/github.com/quasilyte/go-ruleguard/dsl/fluent#File) can be used to check the current file package path
+* [`File.Name`](https://godoc.org/github.com/quasilyte/go-ruleguard/dsl#File) can be used to check the current file name
+* [`File.PkgPath`](https://godoc.org/github.com/quasilyte/go-ruleguard/dsl#File) can be used to check the current file package path
 
 <table><tr>
 <td><a href="index">To index</a></td>

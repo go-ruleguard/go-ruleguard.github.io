@@ -3,9 +3,9 @@
 ```go
 package gorules
 
-import "github.com/quasilyte/go-ruleguard/dsl/fluent"
+import "github.com/quasilyte/go-ruleguard/dsl"
 
-func dupArg(m fluent.Matcher) {
+func dupArg(m dsl.Matcher) {
 	// The pattern string can contain *submatch variables*.
 	//
 	// $_ is an unnamed submatch variable, it matches any kind of AST element.

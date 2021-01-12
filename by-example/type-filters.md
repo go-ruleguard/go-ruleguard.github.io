@@ -3,11 +3,11 @@
 ```go
 package gorules
 
-import "github.com/quasilyte/go-ruleguard/dsl/fluent"
+import "github.com/quasilyte/go-ruleguard/dsl"
 
 // Type filters make it possible to reject matches based on the submatch expr types.
 
-func copyStringToBytes(m fluent.Matcher) {
+func copyStringToBytes(m dsl.Matcher) {
 	// It's not necessary to do a string->[]byte conversion for the copy() argument
 	// when copying a string into []byte. In this rule, we require that $s is string-typed.
 	m.Match(`copy($b, []byte($s))`).
@@ -15,7 +15,7 @@ func copyStringToBytes(m fluent.Matcher) {
 		Suggest(`copy($b, $s)`)
 }
 
-func sprintStringer(m fluent.Matcher) {
+func sprintStringer(m dsl.Matcher) {
 	// Instead of calling fmt.Sprint on a value that implements fmt.Stringer,
 	// we can call its String() method directly. In order to report such cases,
 	// it's necessary to assert that $x is something that implements that interface.

@@ -3,9 +3,9 @@
 ```go
 package gorules
 
-import "github.com/quasilyte/go-ruleguard/dsl/fluent"
+import "github.com/quasilyte/go-ruleguard/dsl"
 
-func assignOp(m fluent.Matcher) {
+func assignOp(m dsl.Matcher) {
 	// This group defines 2 rules.
 	//
 	// Rules are executed in the order they're described, until

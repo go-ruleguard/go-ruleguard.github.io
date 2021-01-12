@@ -3,7 +3,7 @@
 ```go
 package gorules
 
-import "github.com/quasilyte/go-ruleguard/dsl/fluent"
+import "github.com/quasilyte/go-ruleguard/dsl"
 
 // Sometimes you can't describe the exact type using the normal syntax.
 //
@@ -13,7 +13,7 @@ import "github.com/quasilyte/go-ruleguard/dsl/fluent"
 //
 // Fear not, we have a solution!
 
-func unslice(m fluent.Matcher) {
+func unslice(m dsl.Matcher) {
 	// We can safely omit the [:] for strings and slices (but not arrays!).
 	// The `[]$_` type pattern accepts any slice types: []int, []T, [][]string and so on.
 	m.Match(`$s[:]`).
@@ -22,7 +22,7 @@ func unslice(m fluent.Matcher) {
 		Report(`$s[:] is a no-op, can be written as $s`)
 }
 
-func underef(m fluent.Matcher) {
+func underef(m dsl.Matcher) {
 	// Arrays are automatically dereferenced during the indexing, so explicit * is not needed.
 	// The `*[$_]$_` type pattern accepts any pointer-to-array types: *[5]int, [16][]T and so on.
 	m.Match(`(*$arr)[$i]`).

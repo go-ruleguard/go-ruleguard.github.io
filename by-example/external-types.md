@@ -3,7 +3,7 @@
 ```go
 package gorules
 
-import "github.com/quasilyte/go-ruleguard/dsl/fluent"
+import "github.com/quasilyte/go-ruleguard/dsl"
 
 // Imagine that you're using the sqlx package.
 // You have runQuery() and runQueryContext() wrappers to exec SQL queries.
@@ -13,7 +13,7 @@ import "github.com/quasilyte/go-ruleguard/dsl/fluent"
 // Now we need to check if the runQuery() argument is capable of ExecContext() and
 // if it is, propose the runQueryContext() as an alternative.
 
-func execContext(m fluent.Matcher) {
+func execContext(m dsl.Matcher) {
 	// First, we need to tell ruleguard what do we mean when we say "sqlx" inside
 	// the type filters. Import() works for the current group scope.
 	m.Import("github.com/jmoiron/sqlx")
@@ -62,7 +62,7 @@ func runQueryContext(ctx context.Context, e sqlx.ExecerContext, rest ...interfac
 
 **Notes**:
 
-* [`Import()`](https://pkg.go.dev/github.com/quasilyte/go-ruleguard/dsl/fluent#Matcher.Import) must successfully find the specified packages during the ruleguard init phase
+* [`Import()`](https://pkg.go.dev/github.com/quasilyte/go-ruleguard/dsl#Matcher.Import) must successfully find the specified packages during the ruleguard init phase
 * Packages with the last package path part that is different from their package name are not supported yet
 
 <table><tr>

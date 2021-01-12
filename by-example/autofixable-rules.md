@@ -3,9 +3,9 @@
 ```go
 package gorules
 
-import "github.com/quasilyte/go-ruleguard/dsl/fluent"
+import "github.com/quasilyte/go-ruleguard/dsl"
 
-func stringsSimplify(m fluent.Matcher) {
+func stringsSimplify(m dsl.Matcher) {
 	// Some issues have simple fixes that can be expressed as
 	// a replacement pattern. Rules can use Suggest() function
 	// to add a quickfix action for such issues.
@@ -66,7 +66,7 @@ func main() {
 
 **Notes**:
 
-* Combine [`Report()`](https://pkg.go.dev/github.com/quasilyte/go-ruleguard/dsl/fluent#Matcher.Report) and [`Suggest()`](https://pkg.go.dev/github.com/quasilyte/go-ruleguard/dsl/fluent#Matcher.Suggest) if suggested replacement is not self-explanatory
+* Combine [`Report()`](https://pkg.go.dev/github.com/quasilyte/go-ruleguard/dsl#Matcher.Report) and [`Suggest()`](https://pkg.go.dev/github.com/quasilyte/go-ruleguard/dsl#Matcher.Suggest) if suggested replacement is not self-explanatory
 * Quickfix **can** replace a statement list with a single statement
 
 <table><tr>

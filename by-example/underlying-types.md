@@ -3,7 +3,7 @@
 ```go
 package gorules
 
-import "github.com/quasilyte/go-ruleguard/dsl/fluent"
+import "github.com/quasilyte/go-ruleguard/dsl"
 
 // The binary.Write function from the "encoding/binary" package
 // does a simple Write call if the data argument is []byte.
@@ -15,7 +15,7 @@ import "github.com/quasilyte/go-ruleguard/dsl/fluent"
 // type that is defined like this: `type myBytes []byte`.
 // It's still bytes, right?
 
-func binaryWrite(m fluent.Matcher) {
+func binaryWrite(m dsl.Matcher) {
 	// When we consider myBytes type we need to remember that
 	// it's *underlying* type is []byte. The underlying type
 	// of []byte is []byte.
