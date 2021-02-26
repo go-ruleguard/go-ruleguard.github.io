@@ -8,7 +8,7 @@ import "github.com/quasilyte/go-ruleguard/dsl"
 // Sometimes you want to match a statement that is **followed** or **preceded** by another statement.
 // For this case we'll need a multi-statement patterns that gogrep does recognize.
 
-func boolLiteralInExpr(m dsl.Matcher) {
+func useParallelAssignment(m dsl.Matcher) {
 	// If we want to specify $x statement that is followed by $y, we use `$x; $y` notation.
 	// Here we match three statements:
 	// 1. $x assigned to a temporary $tmp
