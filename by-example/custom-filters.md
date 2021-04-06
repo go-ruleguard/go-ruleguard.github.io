@@ -74,6 +74,6 @@ func (*Foo) String() string { return "Foo" }
 
 <table><tr>
 <td><a href="index">To index</a></td>
-<td><a href="?">Next: ?</a></td>
+<td><a href="matching-comments">Next: Matching comments</a></td>
 <td><a href="https://github.com/go-ruleguard/go-ruleguard.github.io/edit/master/by-example/custom-filters.md">Edit this page</a></td>
 </tr></table>

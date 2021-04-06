@@ -24,6 +24,7 @@
 1. [Constexpr evaluation](constexpr-evaluation) - writing filters based on the expression values
 1. [Custom locations](custom-locations) - using [`At()`](https://pkg.go.dev/github.com/quasilyte/go-ruleguard/dsl#Matcher.At) to adjust the match location
 1. [Custom filters](custom-filters) - writing own filters for the `Where()` clause
+1. [Matching comments](matching-comments) - finding issues inside code comments
 
 <hr>
 
