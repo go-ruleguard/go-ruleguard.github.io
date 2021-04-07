@@ -1,0 +1,68 @@
+<meta charset="utf-8">
+<title>Random ruleguard rules</title>
+<meta name="description" content="Find inspiration by looking at various ruleguard rules.">
+
+<meta property="og:title" content="ruleguard-random">
+<meta property="og:type" content="website">
+<meta property="og:description" content="Find inspiration by looking at various ruleguard rules.">
+<meta property="og:url" content="https://go-ruleguard.github.io/random">
+<meta property="og:image" content="https://go-ruleguard.github.io/by-example/ruleguard_poster.png">
+<meta property="og:locale" content="en_US">
+
+<link rel="stylesheet" href="highlight-js/styles/monokai.css">
+<link rel="stylesheet" href="styles.css">
+
+<h2>Roll your ruleguard snippet!</h2>
+
+<div style="width: 1024px">
+    <pre><code id="snippet" class="go"></code></pre>
+</div>
+
+<button id="roll">Roll</button>
+
+<p>
+    Get inspiration by looking at these examples.
+</p>
+
+<script src="highlight-js/highlight.pack.js"></script>
+
+<script>
+window.addEventListener('load', function() {
+    var snippets = [
+        'emptyError.go',
+        'example2.go',
+    ];
+
+    var lastExample = '';
+
+    function pickSnippet() {
+        return snippets[Math.floor(Math.random() * snippets.length)];
+    }
+
+    function renderExample(src) {
+        var codeBlock = document.getElementById('snippet');
+        codeBlock.innerText = src;
+        hljs.highlightAll();
+    }
+
+    function loadRandomExample() {
+        var picked = '';
+        while (true) {
+            picked = pickSnippet();
+            if (picked != lastExample) {
+                break;
+            }
+        }
+        lastExample = picked;
+        fetch("files/" + picked)
+            .then(r => r.text())
+            .then(renderExample);
+    }
+
+    document.getElementById('roll').addEventListener('click', function() {
+        loadRandomExample();
+    });
+
+    loadRandomExample();
+}, false);
+</script>
