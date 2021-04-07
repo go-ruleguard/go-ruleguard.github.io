@@ -23,10 +23,6 @@
     <pre><code id="snippet" class="go"></code></pre>
 </div>
 
-<blockquote>
-    Note: <code>/**/</code> comments are used because <code>//</code> comments break <code>highlight.js</code>.
-</blockquote>
-
 <p>
     Get inspiration and insights by looking at these examples. 🎉
 </p>
@@ -125,7 +121,7 @@ window.addEventListener('load', function() {
 
     function renderExample(src) {
         var codeBlock = document.getElementById('snippet');
-        codeBlock.innerText = src;
+        codeBlock.textContent = src;
         hljs.highlightAll();
     }
 
