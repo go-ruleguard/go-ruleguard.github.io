@@ -15,8 +15,9 @@
 <h2>Roll your ruleguard snippet!</h2>
 
 <button id="roll">Roll</button>
-<select id="snippets-list">
-</select>
+<select id="snippets-list"></select>
+<button id="prev">&#60;</button>
+<button id="next">&#62;</button>
 
 <div style="width: 1024px">
     <pre><code id="snippet" class="go"></code></pre>
@@ -146,13 +147,35 @@ window.addEventListener('load', function() {
         return picked;
     }
 
-    function loadRandomExample() {
-        snippetsSelect.value = biasedRandomSnippet();
+    function selectExample(name) {
+        snippetsSelect.value = name;
         snippetsSelect.dispatchEvent(new Event('change'));
+    }
+
+    function loadRandomExample() {
+        selectExample(biasedRandomSnippet());
     }
 
     document.getElementById('roll').addEventListener('click', function() {
         loadRandomExample();
+    });
+
+    document.getElementById('prev').addEventListener('click', function() {
+        var index = 0;
+        if (lastExample !== '') {
+            var currentIndex = snippets.indexOf(lastExample);
+            index = (currentIndex > 0) ? currentIndex - 1 : currentIndex;
+        }
+        selectExample(snippets[index]);
+    });
+
+    document.getElementById('next').addEventListener('click', function() {
+        var index = 0;
+        if (lastExample !== '') {
+            var currentIndex = snippets.indexOf(lastExample);
+            index = (currentIndex < snippets.length-1) ? currentIndex + 1 : currentIndex;
+        }
+        selectExample(snippets[index]);
     });
 
     loadRandomExample();
