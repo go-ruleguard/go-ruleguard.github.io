@@ -3,10 +3,10 @@ package gorules
 import "github.com/quasilyte/go-ruleguard/dsl"
 
 func suggestStrconvFunc(m dsl.Matcher) {
-	// We don't want to suggest int64(x) if x is already int64,
-	// this is why 2 rules are needed.
-	// Maybe there will be a way to group these 2 together in
-	// future, but this solution will do for now.
+	/* We don't want to suggest int64(x) if x is already int64,
+	   this is why 2 rules are needed.
+	   Maybe there will be a way to group these 2 together in
+	   future, but this solution will do for now. */
 	m.Match(`fmt.Sprintf("%d", $i)`).
 		Where(m["i"].Type.Is(`int64`)).
 		Report(`use strconv.FormatInt($i, 10)`)
