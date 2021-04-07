@@ -14,24 +14,105 @@
 
 <h2>Roll your ruleguard snippet!</h2>
 
+<button id="roll">Roll</button>
+<select id="snippets-list">
+</select>
+
 <div style="width: 1024px">
     <pre><code id="snippet" class="go"></code></pre>
 </div>
 
-<button id="roll">Roll</button>
-
 <p>
-    Get inspiration by looking at these examples.
+    Get inspiration and insights by looking at these examples. 🎉
 </p>
 
 <script src="highlight-js/highlight.pack.js"></script>
 
 <script>
 window.addEventListener('load', function() {
+    'use strict';
+
     var snippets = [
+        'appendAssign.go',
+        'appendCombine.go',
+        'arrayDeref.go',
+        'assignOp.go',
+        'badLock.go',
+        'badRangeCheck.go',
+        'blankAssign.go',
+        'boolLiteralComparison.go',
+        'contextTodo.go',
+        'directAtomicAssign.go',
+        'dupBranchBody.go',
+        'dupCallArgs.go',
+        'dupCond.go',
+        'dupMapKey.go',
+        'dupSubExpr.go',
+        'durationExprSimplify.go',
+        'emptyDecl.go',
         'emptyError.go',
-        'example2.go',
+        'emptySliceMapRange.go',
+        'emptyStringComparison.go',
+        'exprUnparen.go',
+        'filepathJoin.go',
+        'fileWriteSimplify.go',
+        'flagDeref.go',
+        'fmtStringer.go',
+        'go.mod',
+        'go.sum',
+        'negationSimplify.go',
+        'newDeref.go',
+        'nilValReturn.go',
+        'nopAppend.go',
+        'nopSlicing.go',
+        'oddArgsOrder.go',
+        'oddAssign.go',
+        'oddAssignOp.go',
+        'oddBitwiseAnd.go',
+        'oddBitwiseOr.go',
+        'oddBitwiseXor.go',
+        'oddComparison.go',
+        'oddLeadingZeros.go',
+        'oddLenComparison.go',
+        'oddMakeSlice.go',
+        'oddStringsReplace.go',
+        'offBy1.go',
+        'regexpMust.go',
+        'selfAssign.go',
+        'sloppyErrorCheck.go',
+        'sortFuncs.go',
+        'stringConvSimplify.go',
+        'stringsCompareSimplify.go',
+        'stringsCount.go',
+        'suggestChannelRange.go',
+        'suggestSortInts.go',
+        'suggestSortStrings.go',
+        'suggestStrconvFunc.go',
+        'suggestStringConcat.go',
+        'suggestStringsContains.go',
+        'suggestStringsRepeat.go',
+        'suggestStringsReplaceAll.go',
+        'suggestStringsSplit.go',
+        'suggestStringsSuffixPrefix.go',
+        'switchConst.go',
+        'switchTrue.go',
+        'timeEq.go',
+        'underlyingError.go',
+        'valSwap.go',
+        'yodaStyleExpr.go',
     ];
+
+    var snippetsSelect = document.getElementById('snippets-list');
+    for (var i = 0; i < snippets.length; i++) {
+        var option = document.createElement('option');
+        var value = snippets[i];
+        option.value = value;
+        option.innerHTML = value;
+        snippetsSelect.appendChild(option);
+    }
+    snippetsSelect.addEventListener('change', function() {
+        loadExample(snippetsSelect.value);
+    });
 
     var lastExample = '';
 
@@ -45,7 +126,14 @@ window.addEventListener('load', function() {
         hljs.highlightAll();
     }
 
-    function loadRandomExample() {
+    function loadExample(name) {
+        lastExample = name;
+        fetch("files/" + name)
+            .then(r => r.text())
+            .then(renderExample);
+    }
+    
+    function biasedRandomSnippet() {
         var picked = '';
         while (true) {
             picked = pickSnippet();
@@ -53,10 +141,12 @@ window.addEventListener('load', function() {
                 break;
             }
         }
-        lastExample = picked;
-        fetch("files/" + picked)
-            .then(r => r.text())
-            .then(renderExample);
+        return picked;
+    }
+
+    function loadRandomExample() {
+        snippetsSelect.value = biasedRandomSnippet();
+        snippetsSelect.dispatchEvent(new Event('change'));
     }
 
     document.getElementById('roll').addEventListener('click', function() {
