@@ -101,6 +101,8 @@ window.addEventListener('load', function() {
         'reflectValueCompare.go',
     ];
 
+    var urlQuery = new URLSearchParams(window.location.search);
+
     var snippetsSelect = document.getElementById('snippets-list');
     for (var i = 0; i < snippets.length; i++) {
         var option = document.createElement('option');
@@ -111,6 +113,14 @@ window.addEventListener('load', function() {
     }
     snippetsSelect.addEventListener('change', function() {
         loadExample(snippetsSelect.value);
+
+        // Rewrite URL query, if possible.
+        if (window.history.replaceState) {
+            let url = window.location.protocol + "//" + window.location.host + window.location.pathname;
+            var snippet = snippetsSelect.value.slice(0, -3); // without ".go"
+            url = url + "?snippet=" + snippet;
+            window.history.replaceState({path: url}, "", url);
+        }
     });
 
     var lastExample = '';
@@ -174,6 +184,11 @@ window.addEventListener('load', function() {
         selectExample(snippets[index]);
     });
 
-    loadRandomExample();
+    var queriedSnippet = urlQuery.get("snippet");
+    if (queriedSnippet && snippets.indexOf(queriedSnippet + ".go") !== -1) {
+        selectExample(snippets[snippets.indexOf(queriedSnippet + ".go")]);
+    } else {
+        loadRandomExample();
+    }
 }, false);
 </script>
