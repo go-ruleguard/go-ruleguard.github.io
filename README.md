@@ -19,6 +19,7 @@
         <li>Diagnostics are written in a declarative way</li>
         <li><a href="https://github.com/quasilyte/go-ruleguard/blob/master/_docs/dsl.md#suggestions-quickfix-support">Quickfix</a> actions support</li>
         <li>Powerful match filtering features, like expression <a href="https://github.com/quasilyte/go-ruleguard/blob/master/_docs/dsl.md#type-pattern-matching">type pattern matching</a></li>
+        <li>Not restricted to AST rules; it's possible to write a comment-related rule, for example</li>
         <li>Rules can be installed as <a href="https://quasilyte.dev/blog/post/ruleguard-modules/">Go modules</a></li>
         <li>Integrated into <a href="https://github.com/golangci/golangci-lint">golangci-lint</a></li>
       </ul>
