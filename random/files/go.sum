@@ -1,3 +1,5 @@
 github.com/quasilyte/go-ruleguard v0.3.4 h1:F6l5p6+7WBcTKS7foNQ4wqA39zjn2+RbdbyzGxIq1B0=
 github.com/quasilyte/go-ruleguard/dsl v0.3.2 h1:ULi3SLXvDUgb0u2IM5xU6er9KeWBSaUh1NlDjCgLHU8=
 github.com/quasilyte/go-ruleguard/dsl v0.3.2/go.mod h1:KeCP03KrjuSO0H1kTuZQCWlQPulDV6YMIXmpQss17rU=
+github.com/quasilyte/go-ruleguard/dsl v0.3.7 h1:jnz0d3UNaw/TxY9gebxE5kSPR+C6CvSPmXLNoz2gQvw=
+github.com/quasilyte/go-ruleguard/dsl v0.3.7/go.mod h1:KeCP03KrjuSO0H1kTuZQCWlQPulDV6YMIXmpQss17rU=
