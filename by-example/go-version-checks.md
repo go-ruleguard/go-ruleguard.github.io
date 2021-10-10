@@ -1,4 +1,4 @@
-# [Ruleguard by example](https://go-ruleguard.github.io/by-example/): Matching comments
+# [Ruleguard by example](https://go-ruleguard.github.io/by-example/): Go version checks
 
 ```go
 package gorules
