@@ -62,6 +62,7 @@ func main() {
 **Notes**:
 
 * [`Is()`](https://pkg.go.dev/github.com/quasilyte/go-ruleguard/dsl#MatchedNode.Is) argument is a [`go/ast`](https://golang.org/pkg/go/ast/) type name
+* You can use [`m["$$"].Parent()`](https://pkg.go.dev/github.com/quasilyte/go-ruleguard/dsl#MatchedNode.Parent) to add filters based on the AST context
 
 <table><tr>
 <td><a href="index">To index</a></td>
