@@ -58,6 +58,6 @@ func main() {
 
 <table><tr>
 <td><a href="index">To index</a></td>
-<td><a href="?">Next: ?</a></td>
+<td><a href="go-version-checks">Next: Go version checks</a></td>
 <td><a href="https://github.com/go-ruleguard/go-ruleguard.github.io/edit/master/by-example/matching-comments.md">Edit this page</a></td>
 </tr></table>
