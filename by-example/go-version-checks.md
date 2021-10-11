@@ -54,6 +54,6 @@ func example(r io.Reader) {
 
 <table><tr>
 <td><a href="index">To index</a></td>
-<td><a href="go-version-checks">Next: ?</a></td>
+<td><a href="deadcode-detection">Next: Deadcode detection</a></td>
 <td><a href="https://github.com/go-ruleguard/go-ruleguard.github.io/edit/master/by-example/go-version-checks.md">Edit this page</a></td>
 </tr></table>
