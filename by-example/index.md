@@ -27,6 +27,7 @@
 1. [Matching comments](matching-comments) - finding issues inside code comments
 1. [Go version checks](go-version-checks) - limiting the rules to the specified Go version
 1. [Deadcode detection](deadcode-detection) - handling the code reachability
+1. [Local functions](local-functions) - reusing filter expressions in multiple `Where()` clauses
 
 <hr>
 

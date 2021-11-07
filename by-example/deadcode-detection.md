@@ -67,6 +67,6 @@ func main() {
 
 <table><tr>
 <td><a href="index">To index</a></td>
-<td><a href="?">Next: ?</a></td>
+<td><a href="local-functions">Next: Local functions</a></td>
 <td><a href="https://github.com/go-ruleguard/go-ruleguard.github.io/edit/master/by-example/deadcode-detection.md">Edit this page</a></td>
 </tr></table>
