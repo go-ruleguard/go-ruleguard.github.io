@@ -44,7 +44,7 @@ func main() {
 **Notes**:
 
 * `-c 0` argument makes the `ruleguard` print **one** context line in its output (line 6 in this example)
-* `-rules` argument accepts a `ruleguard` rules source (always `rules.go` in out examples)
+* `-rules` argument accepts a `ruleguard` rules source (always `rules.go` in our examples)
 * [`Match()`](https://pkg.go.dev/github.com/quasilyte/go-ruleguard/dsl#Matcher.Match) argument is a [github.com/mvdan/gogrep](https://github.com/mvdan/gogrep) pattern string
 * Ruleguard rules file **must** start with `package gorules`; it can't be other package
 * The [`dsl`](https://pkg.go.dev/github.com/quasilyte/go-ruleguard/dsl) package documentation is a common source of the most answers
