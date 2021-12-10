@@ -78,7 +78,7 @@ func main() {
 * `struct{$x; $*_}` matches a struct that has $x-typed first field
 * `struct{$*_; $x; $*_}` matches a struct that contains $x-typed field
 * `struct{$*_; $x}` matches a struct that has $x-typed last field
-* It's impossible to enumerate everything here, but you should get the general
+* It's impossible to enumerate everything here, but you should get the general idea
 
 <table><tr>
 <td><a href="index">To index</a></td>
