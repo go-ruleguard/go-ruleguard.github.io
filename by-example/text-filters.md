@@ -6,7 +6,7 @@ package gorules
 import "github.com/quasilyte/go-ruleguard/dsl"
 
 // Normally, all matching is done on the AST and types level.
-// But sometimes it's necessary (or just easier) to tream the
+// But sometimes it's necessary (or just easier) to treat the
 // submatches as text.
 
 func printFmt(m dsl.Matcher) {
