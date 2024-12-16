@@ -21,6 +21,7 @@
 1. [Node predicates](node-predicates) - asserting the submatch nodes AST types
 1. [File predicates](file-predicates) - applying file-scoped filters
 1. [Text filters](text-filters) - matching "literal" variables (by their name) and more
+1. [Nested AST filters](ast-filters) - matching an AST pattern inside other AST
 1. [Constexpr evaluation](constexpr-evaluation) - writing filters based on the expression values
 1. [Custom locations](custom-locations) - using [`At()`](https://pkg.go.dev/github.com/quasilyte/go-ruleguard/dsl#Matcher.At) to adjust the match location
 1. [Custom filters](custom-filters) - writing own filters for the `Where()` clause

@@ -6,7 +6,7 @@ package gorules
 import "github.com/quasilyte/go-ruleguard/dsl"
 
 // Normally, all matching is done on the AST and types level.
-// But sometimes it's necessary (or just easier) to tream the
+// But sometimes it's necessary (or just easier) to treat the
 // submatches as text.
 
 func printFmt(m dsl.Matcher) {
@@ -78,6 +78,6 @@ func f() (int, error) { return 0, nil }
 
 <table><tr>
 <td><a href="index">To index</a></td>
-<td><a href="constexpr-evaluation">Next: Constexpr evaluation</a></td>
+<td><a href="ast-filters">Next: AST filters</a></td>
 <td><a href="https://github.com/go-ruleguard/go-ruleguard.github.io/edit/master/by-example/text-filters.md">Edit this page</a></td>
 </tr></table>
